@@ -1,0 +1,35 @@
+"""Este programa crea una lista de tareas personalizable,permitiendo al usuario agregar, eliminar y marcar tareas como completadas"""
+
+
+
+class Tarea:
+    def __init__(self, titulo, descripcion, estado="Pendiente"):
+        self.titulo = titulo
+        self.descripcion = descripcion
+        self.estado = estado
+
+    def marcar_como_completada(self):
+        self.estado = "Completada"
+
+    def __str__(self):
+        return f"Título: {self.titulo}\nDescripción: {self.descripcion}\nEstado: {self.estado}"
+
+# Crear una lista para almacenar las tareas
+lista_tareas = []
+
+# Crear algunas tareas
+tarea1 = Tarea("Hacer la compra", "Comprar leche, pan y huevos")
+tarea2 = Tarea("Estudiar Python", "Resolver ejercicios del curso")
+tarea3 = Tarea("Ir al gimnasio", "Hacer cardio y pesas")
+
+# Agregar las tareas a la lista
+lista_tareas.append(tarea1)
+lista_tareas.append(tarea2)
+lista_tareas.append(tarea3)
+
+# Marcar una tarea como completada
+lista_tareas[1].marcar_como_completada()
+
+# Imprimir todas las tareas
+for tarea in lista_tareas:
+    print(tarea)
