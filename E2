@@ -1,3 +1,4 @@
+""" Hecho por keila canales"""
 class Articulo:
     def __init__(self, tipo, especificacion, precio_compra):
         self.tipo = tipo  
